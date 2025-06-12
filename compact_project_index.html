@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ca">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>COMPACT Project</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --color-black: #000000;
+      --color-white: #ffffff;
+      --color-blue: #00cfff;
+      --color-gray: #aaaaaa;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Montserrat', sans-serif;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: var(--color-black);
+      color: var(--color-white);
+    }
+
+    header {
+      background: linear-gradient(270deg, var(--color-black), var(--color-blue));
+      background-size: 400% 400%;
+      animation: gradient 10s ease infinite;
+      text-align: center;
+      padding: 4rem 1rem;
+    }
+
+    header img {
+      max-width: 420px;
+      margin-bottom: 1rem;
+    }
+
+    header h1 {
+      font-size: 2rem;
+      animation: fadeIn 2s ease;
+    }
+
+    nav {
+      background: var(--color-black);
+      padding: 1rem;
+      position: sticky;
+      top: 0;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      z-index: 1000;
+    }
+
+    nav a {
+      color: var(--color-white);
+      text-decoration: none;
+      position: relative;
+    }
+
+    nav a:hover::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -4px;
+      width: 100%;
+      height: 2px;
+      background: var(--color-blue);
+      transition: 0.3s;
+    }
+
+    .section {
+      padding: 4rem 2rem;
+      text-align: center;
+    }
+
+    footer {
+      background: var(--color-black);
+      color: var(--color-gray);
+      text-align: center;
+      padding: 2rem;
+    }
+
+    @keyframes gradient {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); opacity: 1; }
+      50% { transform: scale(1.05); opacity: 0.7; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+
+    .icon-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+
+    .icon-box {
+      background: #111;
+      border-radius: 12px;
+      padding: 2rem 1rem;
+      animation: fadeIn 1s ease;
+    }
+
+    .icon-box:hover {
+      animation: pulse 1.5s infinite;
+    }
+
+    .icon-box h3 {
+      margin-top: 1rem;
+      color: var(--color-blue);
+    }
+
+    .icon-box p {
+      font-size: 0.9rem;
+      color: #ccc;
+    }
+
+    @media (max-width: 600px) {
+      nav {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <img src="https://i.ibb.co/7xdywmsf/compact-project-transparente.png" alt="COMPACT Project Logo">
+    <h1>Disseny intel·ligent. Compacte. Potent.</h1>
+  </header>
+
+  <nav>
+    <a href="#inici">Inici</a>
+    <a href="#sobre">Sobre</a>
+    <a href="#inspiracio">Inspiració</a>
+  </nav>
+
+  <section class="section" id="sobre">
+    <h2>Sobre Nosaltres</h2>
+    <p>COMPACT Project és una marca que aposta per un disseny eficient, modern i potent. Fusionem tecnologia i estil per crear productes únics i útils.</p>
+    <div class="icon-grid">
+      <div class="icon-box">
+        <h3>Eficiència</h3>
+        <p>Solucions dissenyades per maximitzar la funcionalitat i reduir l'excés.</p>
+      </div>
+      <div class="icon-box">
+        <h3>Estètica</h3>
+        <p>Un estil net, atractiu i adaptat al segle XXI.</p>
+      </div>
+      <div class="icon-box">
+        <h3>Innovació</h3>
+        <p>Ens avancem al futur amb dissenys disruptius i compactes.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="inspiracio">
+    <h2>Inspiració</h2>
+    <p>“La simplicitat és l’última sofisticació.” – Leonardo da Vinci</p>
+    <p>Creiem en el poder de les idees compactes i brillants.</p>
+  </section>
+
+  <footer>
+    © 2025 COMPACT Project. Tots els drets reservats.
+  </footer>
+</body>
+
+</html>
